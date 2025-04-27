@@ -16,7 +16,7 @@ WORKDIR /app
 #   (Get the correct URL from pytorch.org/get-started/locally/ if CUDA version differs)
 # - Use --no-cache-dir to keep the image smaller
 RUN apt-get update && \
-    apt-get install -y python3 python3-pip && \
+    apt-get install -y python3 python3-pip git && \
     rm -rf /var/lib/apt/lists/* && \
     python3 -m pip install --no-cache-dir --upgrade pip && \
     python3 -m pip install --no-cache-dir jupyterlab tqdm && \
