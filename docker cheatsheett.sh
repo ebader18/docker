@@ -9,6 +9,8 @@ List containers
     docker ps
 List images
     docker images
+Delete image
+    docker rmi
 
 Build image from dockerfile
     Make sure to activate python environment
@@ -17,6 +19,6 @@ Build image from dockerfile
         tag image with name "pytorch-jupyterlab"
 Run image
     sudo docker run --rm -p 8888:8888 -v ~/_sw/docker/python/notebooks:/app --name jupyter-server my-jupyter-lab
-    sudo docker run --rm --gpus all -p 8888:8888 -v ~/_sw/docker/python_torch/notebooks:/app --name jupyter-gpu-server my-jupyter-lab-gpu
+    sudo docker run --rm --gpus all -p 8888:8888 -v ~/_sw/docker/python_torch/notebooks:/app --name jupyter-gpu-server pytorch-jupyterlab
 Access JypterLab
     http://127.0.0.1:8888
